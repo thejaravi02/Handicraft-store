@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(243, 83, 9);
+    padding: 10px 80px;
+    color: azure;
+    box-shadow: 0 4px 8px gray;
+
+}
+.logo img{
+    width: 50px;
+
+}
+.navbar{
+    display: flex;
+    gap: 20px;
+}
+.navbar a{
+    font-weight: 500;
+    padding: 10px 20px;
+    font-size:1rem;
+    color: aliceblue;
+    transition: 0.3s;
+    position: relative;
+}
+.navbar li{
+    position: relative;
+}
+.navbar a::after{
+    content: "";
+    width: 0px;
+    height: 3px;
+    background: rgb(250, 165, 17);
+    position:absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+    
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+header .navbar a:hover{
+    color: black;
+
+    
+    
+}
+.header-btn a{
+    padding: 10px 20px;
+    font-weight: 500;
+    margin-left: 10px;
+    transition:all 0.3s;
+}
+.header-btn .sign-in{
+    background-color: rgb(97, 97, 222);
+    color: aliceblue;
+    border-radius: 0.5rem;
+    border: 2px solid wheat;
+}
+.header-btn .sign-in:hover{
+    background-color: rgb(228, 169, 86);
+    color: antiquewhite;
+}
+.header-btn .sign-up{
+    color: rgba(171, 246, 200, 0.833);
+    text-decoration: none;
+}
+.Home{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url(img/KrishStore.webp);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+    padding:0 100px ;
+    color: azure;
+    text-shadow: 2px 2px 8px rgb(68, 67, 67);
+}
+.Home::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 33, 33, 0.445);
+}
+.text{
+    position: relative;
+    z-index: 1;
+}
+.text h1{
+    font-size: 3.5rem;
+    letter-spacing: .7px;
+    line-height: 1.1;
+    color: rgb(247, 146, 22);
+}
+.text span{
+    color: aliceblue;
+}
+.text p{
+    margin: 0.5rem 0 1.5rem;
+    font-size: 1.2rem;
+    max-width: 500px;
+}
+.app-stores{
+    display: flex;
+    gap: 1rem;
+}
+.app-stores img{
+    width: 120px;
+    filter: drop-shadow(2px 4px 6px gray);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.app-stores img:hover{
+    transform: scale(1.1);
+}
+
+
+.form-container{
+    z-index: 2;
+    background-color: rgba(224, 237, 248, 0.8);
+    padding: 30px;
+    box-shadow: 0 4px 15px rgb(255, 183, 0);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin-left: auto;
+    backdrop-filter: blur(10px);
+}
+.form-container h2{
+    color: rgb(245, 167, 43);
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+.form-container input,
+.form-container select,
+.form-container textarea
+{
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid orange;
+    width: 100%;
+    background-color: azure;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+.form-container button{
+    padding: 12px;
+    border-radius: 6px;
+    background-color: orange;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.heading{
+    text-align: center;
+    margin: 50px 0;
+}
+.heading span{
+    color: orange;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.heading h1{
+    font-size: 2rem;
+    color: rgb(42, 42, 42);
+    margin: 0.5rem;
+}
+.service-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 2rem;
+    padding: 0 50px;
+    margin: 3rem 0;
+}
+.service-container .box{
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(209, 213, 213);
+    border-radius:8px ;
+    box-shadow:0 4px 10px rgb(77, 76, 76);
+}
+.service-container .box i{
+    font-size: 40px;
+    padding: 15px;
+    background: whitesmoke;
+    border-radius: 50%;
+    color: orange;
+    box-shadow:0 0 15px gray;
+}
+.service-container .box h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(33, 32, 32);
+}
+.service-container .box p{
+    font-size: 1rem;
+    color: rgb(81, 81, 81);
+    margin: 0;
+}
+.service-container .box:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+
+}
+.service-container .box .bx:hover{
+    background: orange;
+    color: white;
+}
+.products{
+    padding:0 100px;
+}
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.products-container .box{
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 1px 4px 41px rgb(53, 53, 53) ;
+}
+.products-container .box img{
+    width: 100%;
+    height: 200px;
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+}
+.products-container .box h2{
+    font-weight: 500;
+    font-size: 1rem;
+}
+.products-container .box h3{
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 0.2rem 0 0.5rem;
+    color: orange;
+
+}
+.products-container .box .btn{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(105, 48, 237);
+    color: white;
+    padding: 10px;
+    border-radius: 0.5rem;
+    margin: 3px;
+}
+.products-container .box .btn:hover{
+    background: orange;
+}
